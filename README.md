@@ -1,5 +1,7 @@
 # Banking App
 
+**Horizon Banking: A modern banking platform for everyone.**
+
 Techstacks used:
 - [x] Next.js
 - [x] React.js
