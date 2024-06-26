@@ -46,19 +46,19 @@ const AuthForm = ({ type }: { type: string }) => {
 
     try {
       // Sign Up with Appwrite && Create a Plaid link token
-      if(type === 'sign-up'){
+      if (type === 'sign-up') {
         const newUser = await signUp(data);
 
         setUser(newUser);
       }
 
-      if(type === 'sign-in'){
+      if (type === 'sign-in') {
         const response = await signIn({
           email: data.email,
           password: data.password,
         })
 
-        if(response) router.push('/')
+        if (response) router.push('/')
       }
 
     } catch (error) {
@@ -206,6 +206,11 @@ const AuthForm = ({ type }: { type: string }) => {
                   }
                 </Button>
               </div>
+
+              <button type="button" onClick={() => { throw new Error("Sentry Test Error"); }}>
+                Break the world
+              </button>;
+
 
             </form>
           </Form>
